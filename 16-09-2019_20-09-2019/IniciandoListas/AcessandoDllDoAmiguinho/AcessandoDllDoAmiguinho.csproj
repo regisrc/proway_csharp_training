@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MinhaBiblioteca">
+      <HintPath>\\svprwy001\alunos\hbsis\PastaDlls\Rogerio Schmitt\MinhaBiblioteca.dll</HintPath>
+    </Reference>
+    <Reference Include="MyLibrary">
+      <HintPath>\\svprwy001\alunos\hbsis\PastaDlls\CalopsitaRoxa.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
