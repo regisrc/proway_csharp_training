@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/fc/e9/7e/fce97eba95fd3de922940e31f8ab8982.gif');
+}
+    
+.transparencia_cards {
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+.transparencia_cards_header {
+    background-color: #e9ecef;
+}
+
+#barra_lateral{
+    background-color: rgba(255, 74, 210, 0.884);
+    width: 15vw;
+}
