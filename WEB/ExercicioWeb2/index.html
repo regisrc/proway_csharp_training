@@ -12,15 +12,32 @@
 </head>
 
 <body>
-    <aside id="barra_lateral" class="h-100 position-absolute text-center">
-        <div id="conteudo_barra_lateral" class="w-100 mt-2">
-            <h2>Histórico</h2>
-            <hr/>
+    <header id="header_pagina" class="cor_pagina position-fixed w-100 justify-content-center ">
+        <div class="row h-100 justify-content-md-center align-items-center text-center">
+            <div class="col-md-4">
+                <h1 style="font-size: 2vmax;">Conversor Monetário</h1>
+            </div>
+        </div>
+    </header>
+    <aside id="barra_lateral" class="position-fixed h-100 text-center cor_pagina margin_for_top ">
+
+        <div id="conteudo_barra_lateral" class="w-100 mt-2 table-wrapper-scroll-y">
+            <h1 style="font-size: 2vmax;">Histórico</h1>
+            <table id="table_principal" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Valor $</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_table">
+
+                </tbody>
+            </table>
         </div>
     </aside>
     <div class="container-fluid h-100">
-        <div class="row align-items-center h-100 text-center justify-content-center">
-            <div class="card transparencia_cards ">
+        <div class="row align-items-center h-100 text-center justify-content-center ">
+            <div class="card transparencia_cards margin_for_top">
                 <div class="card-header transparencia_cards_header">
                     <h5>Conversor Monetário</h5>
                 </div>
@@ -29,24 +46,19 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
                         </div>
-                        <input type="text" class="form-control money_mask_real" id="valor_real" aria-label="Valor em real">
-                        <div class="input-group-append">
-                            <span class="input-group-text">,00</span>
-                        </div>
+                        <input type="text" class="form-control money_mask_real" id="valor_real"
+                            aria-label="Valor em real">
                     </div>
 
                     <div class="input-group m-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text">$</span>
                         </div>
-                        <input type="text" disabled="true" class="form-control" id="valor_dolar" aria-label="Valor em dolar">
-                        <div class="input-group-append">
-                            <span class="input-group-text">.00</span>
-                        </div>
+                        <input type="text" disabled="true" class="form-control" id="valor_dolar"
+                            aria-label="Valor em dolar">
                     </div>
 
-                    <input class="w-25 btn btn-primary p-1 m-3" type="button" id="botao_enviar"
-                        value="Enviar">
+                    <input class="w-25 btn btn-primary p-1 m-3" type="button" id="botao_enviar" value="Enviar">
                 </div>
             </div>
         </div>

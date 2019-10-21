@@ -2,9 +2,9 @@ $('[id="botao_enviar"]').click(
     function () {
         var url = 'https://economia.awesomeapi.com.br/USD-BRL';
         try {
-            $.getJSON(url, function (data) {
+            $.getJSON(url, (data) => {
                 var valorUsuario = ($('[id="valor_real"]').val());
-                var valor = (valorUsuario.replace(/\./g, '').replace(/,/g, '.').replace('R$', '') / data[0]["bid"]).toFixed(3);
+                var valor = (valorUsuario.replace(/\./g, '').replace(/,/g, '.').replace('R$', '') / data[0]["bid"]).toFixed(2);
                 var valorEmDolar = Number.parseFloat(valor).toLocaleString('en-US');
                 $('[id="valor_dolar"]').val(valorEmDolar);
                 gravaNoArray(valorEmDolar);
@@ -23,8 +23,8 @@ function inicializaBarraLateral(arrayElementos) {
 }
 
 function appendOnParagraph(valor) {
-    var text = $("<p></p>").text("$" + valor);
-    $("#conteudo_barra_lateral").append(text);
+    var text = $("<tr><td></td></tr>").text("$" + valor);
+    $("#tbody_table").append(text);
 }
 
 function gravaNoArray(valor) {
@@ -48,11 +48,12 @@ function keyDownTextField(e) {
         $('[id=botao_enviar]').click();
 };
 
-$(document).ready((function () {
+$(document).ready(( () => {
     $(".money_mask_real").maskMoney({
         allowNegative: true,
         thousands: '.',
-        decimal: ','
+        decimal: ',',
+        digits: 2
     });
 
     inicializaBarraLateral(JSON.parse(localStorage.getItem("valoresMonetarios")))

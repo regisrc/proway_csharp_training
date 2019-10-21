@@ -2,7 +2,13 @@ body {
     height: 100vh;
     background-image: url('https://i.pinimg.com/originals/fc/e9/7e/fce97eba95fd3de922940e31f8ab8982.gif');
 }
-    
+
+@media only screen and (max-width: 1026px) {
+    #barra_lateral {
+        display: none;
+    }
+}
+
 .transparencia_cards {
     background-color: rgb(255, 255, 255, 0.9);
 }
@@ -11,7 +17,32 @@ body {
     background-color: #e9ecef;
 }
 
-#barra_lateral{
-    background-color: rgba(255, 74, 210, 0.884);
+.cor_pagina {
+    background-color: rgba(74, 204, 255, 0.959);
+}
+
+#barra_lateral {
+    background-color: rgba(74, 204, 255, 0.959);
     width: 15vw;
+}
+
+.border_page {
+    border-bottom: rgba(167, 0, 125, 0.884);
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+}
+
+.hr_style {
+    color: rgba(167, 0, 125, 0.884);
+    background-color: rgba(167, 0, 125, 0.884);
+    height: 1px;
+}
+
+#header_pagina {
+    height: var(--height_header, 56px);
+    z-index: 3000;
+}
+
+.margin_for_top {
+    margin-top: 56px;
 }
