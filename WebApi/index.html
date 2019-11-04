@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-info">
+    <section class="h-100 container">
+        <div class="h-100 bg-light p-4 h-100 align-items-center justify-content-center text-center">
+            <div class="form-row">
+                <div class="col-md-12 m-2 mb-3 input-group">
+                    <input class="w-50" type="text" name="cep" id="cep" placeholder="CEP" required>
+                    <div class="input-group-append">
+                        <input class="btn btn-primary w-100" type="button" value="Mostrar" name="mostrar">
+                    </div>
+                    <div class="input-group-append">
+                        <input class="btn btn-warning w-100" type="button" value="Limpar" name="limpar">
+                    </div>
+                </div>
+            </div>
+            <div class="m-2">
+                <h3 class="text-arial">INFORMAÇÕES</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="logradouro" id="logradouro"
+                        placeholder="Logradouro">
+                </div>
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="complemento" id="complemento"
+                        placeholder="Complemento">
+                </div>
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="bairro" id="bairro" placeholder="Bairro">
+                </div>
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="localidade" id="localidade"
+                        placeholder="Localidade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="gia" id="gia" placeholder="Gia">
+                </div>
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="ibge" id="ibge" placeholder="Ibge">
+                </div>
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="cep_form" id="cep_form"
+                        placeholder="Localidade">
+                </div>
+                <div class="col-md-3">
+                    <input class="m-2 w-100" disabled="true" type="text" name="uf" id="uf" placeholder="UF">
+                </div>
+                    <!-- mt-5 m-2-->
+                    <div class="col">
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                            <button type="button" data-dismiss="alert" class="close">
+                                <span aria-hidden="true">&times;</span>     
+                            </button>
+                            <h2 class="alert-heading">Pra dar sorte</h2>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

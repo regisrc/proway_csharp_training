@@ -1,0 +1,20 @@
+
+body {
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/fc/e9/7e/fce97eba95fd3de922940e31f8ab8982.gif');
+}
+    
+.transparencia_cards {
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.holly{
+    background-image: url('https://a-static.mlcdn.com.br/618x463/bicicleta-houston-foxer-hammer-aro-26-21-marchas-freio-v-brake/magazineluiza/220307500/d2435bdf7410fef87cabbcdb990752c8.jpg');
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    position: absolute; 
+
+}
+
