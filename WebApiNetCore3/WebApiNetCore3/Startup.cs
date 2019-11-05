@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,9 +10,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using WebApiObjeto.Models;
+using WebApiNetCore3.Models;
+using Microsoft.OpenApi.Models;
 
-namespace WebApiObjeto
+namespace WebApiNetCore3
 {
     public class Startup
     {
@@ -26,10 +27,14 @@ namespace WebApiObjeto
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddDbContext<BancoDeDadosInnerJoinContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("MyConection")));
 
-            services.AddDbContext<WebApiObjetoContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WebApiObjetoContext")));
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyApi", Version = "v1" });
+            });
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +44,15 @@ namespace WebApiObjeto
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Api V1");
+            });
 
             app.UseRouting();
 

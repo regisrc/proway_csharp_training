@@ -10,9 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using WebApiObjeto.Models;
+using WebApiCoreCrudImoveis.Models;
 
-namespace WebApiObjeto
+namespace WebApiCoreCrudImoveis
 {
     public class Startup
     {
@@ -28,8 +28,8 @@ namespace WebApiObjeto
         {
             services.AddControllers();
 
-            services.AddDbContext<WebApiObjetoContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WebApiObjetoContext")));
+            services.AddDbContext<WebApiCoreCrudImoveisContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("WebApiCoreCrudImoveisContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
